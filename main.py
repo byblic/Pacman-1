@@ -67,3 +67,14 @@ class Maze:
                     pygame.draw.rect(screen, BLUE, (x * CELL_SIZE, y * CELL_SIZE + 50, CELL_SIZE, CELL_SIZE))
                 elif self.grid[y][x] == 0:
                     pygame.draw.circle(screen, YELLOW, (x * CELL_SIZE + CELL_SIZE // 2, y * CELL_SIZE + CELL_SIZE // 2 + 50), 3)
+
+
+
+class Game:
+    def __init__(self):
+        self.settings = GameSettings()
+        self.pacman = PacMan()
+        self.ghosts = [Ghost(1, 13, (255, 0, 0))]
+        self.maze = Maze()
+        self.score_manager = ScoreManager()
+        self.game_state = GameState.PLAYING
