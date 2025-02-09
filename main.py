@@ -69,6 +69,7 @@ class Maze:
                     pygame.draw.circle(screen, YELLOW, (x * CELL_SIZE + CELL_SIZE // 2, y * CELL_SIZE + CELL_SIZE // 2 + 50), 3)
 
 
+pygame.init()
 
 class Game:
     def __init__(self):
